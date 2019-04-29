@@ -1,0 +1,17 @@
+plib.uvprojx
+plib.uvoptx
+plib.uvguix.baris.cengiz
+Objects/underlimit.o
+Objects/underlimit.d
+Objects/underlimit.crf
+Objects/ArInp.Scr
+DebugConfig/Target_STM32H750VBTx_1.0.0.dbgconf
+DebugConfig/Target_1_STM32H750VBTx_1.0.0.dbgconf
+Objects/plib_Target.dep
+Objects/plib.build_log.htm
+Objects/automata.o
+Objects/automata.d
+Objects/automata.crf
+Objects/overlimit.o
+Objects/overlimit.d
+Objects/overlimit.crf
