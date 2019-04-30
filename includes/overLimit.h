@@ -10,6 +10,10 @@ typedef struct overLimit_inputParameters {
 	float delay;
 	float dropout_ratio;
 	float dropout_time;
+	
+	uint8_t enable:1;
+	uint8_t init_error:1;
+	uint8_t rem:6;
 
 }overLimit_inputParameters;
 
@@ -21,12 +25,16 @@ typedef struct overLimit_outputParameters {
 	uint8_t initial_pick_up:1;
 	uint8_t pick_up:1;
 	uint8_t trip:1;
-	uint8_t trip_latch:5;
+	uint8_t trip_latch:1;
+	uint8_t rem:4;
 	
 
 }overLimit_outputParameters;
 
-void overLimit(float rms,overLimit_inputParameters overLimit_in, overLimit_outputParameters *overLimit_out,uint8_t reset, uint8_t enable);
+
+void overLimitInitialization(overLimit_inputParameters *in,overLimit_inputParameters init);
+void overLimit(float rms,overLimit_inputParameters overLimit_in, overLimit_outputParameters *overLimit_out,uint8_t inhibit,uint8_t reset);
+
 
 
 #endif

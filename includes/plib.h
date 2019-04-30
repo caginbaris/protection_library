@@ -3,7 +3,7 @@
 #define __plib_h
 
 
-
+#include <stdint.h>
 
 #include "automata.h"
 #include "overLimit.h"
