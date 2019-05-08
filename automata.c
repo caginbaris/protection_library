@@ -96,6 +96,51 @@ uint8_t on_off_delay(uint8_t input, uint8_t mem, uint32_t qual_sample, uint32_t 
 }
 
 
+uint8_t on_off_delay2( uint8_t input,  uint8_t mem, uint32_t onSample,uint32_t offSample, uint32_t *count){
+
+
+	uint8_t out;
+
+	out = mem;
+
+	if (input == 1 && mem == 0)
+	{
+		*count = *count + 1;
+
+		if ((*count) == onSample)
+		{
+			out = 1;
+		}
+
+	}
+
+
+
+	if (input == 0 && mem == 1)
+	{
+		*count = *count + 1;
+
+		if ((*count) == offSample)
+		{
+			out = 0;
+		}
+
+	}
+
+
+	if(!(input^out)){*count=0;}
+
+
+	
+
+
+	return out;
+
+
+
+}
+
+
 void f_limiter(float* parameter,float downLimit,float upLimit){
 
 

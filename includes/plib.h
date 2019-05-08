@@ -10,16 +10,5 @@
 #include "underLimit.h"
 
 
-
-#ifndef fs
-
-#define fs 1000
-
-#endif
-
-
-
-
-
 #endif
 
